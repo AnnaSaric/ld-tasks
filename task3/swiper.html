@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper Custom CSS Example</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Your custom CSS file -->
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="custom-image" src="./images/image1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img class="custom-image" src="./images/image2.png" />
+        </div>
+        <div class="swiper-slide">
+          <img class="custom-image" src="./images/image3.png" />
+        </div>
+        <div class="swiper-slide">
+          <img class="custom-image" src="./images/image1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img class="custom-image" src="./images/image2.png" />
+        </div>
+        <div class="swiper-slide">
+          <img class="custom-image" src="./images/image3.png" />
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 900,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          375: { slidesPerView: 1, spaceBetween: 40 },
+          1440: { slidesPerView: 3, spaceBetween: 50 },
+        },
+      });
+      swiper.on("slideChange", function () {
+        const slide = document.getElementsByClassName("swiper-slide-next")[0];
+        console.log(slide);
+      });
+    </script>
+  </body>
+</html>
