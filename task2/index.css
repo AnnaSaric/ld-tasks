@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed";
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+}
+.container {
+  background-color: #ffffff;
+
+  padding: 0 64px;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: -10;
+}
+
+.header {
+  text-align: center;
+  padding: 64px;
+  float: left;
+  width: 100%;
+  background-color: #ffffff;
+}
+.header h1 {
+  font-size: 54px;
+  margin: 0;
+}
+.header p {
+  font-size: 24px;
+}
+.photos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 64px;
+}
+
+.left {
+  position: relative;
+  flex: 33.333%;
+  padding-left: 64px;
+  padding-right: 58px;
+}
+
+.left img {
+  border-radius: 200px;
+  width: 100%;
+}
+.photo1 {
+  position: static;
+  width: 267.66px;
+  height: 253.05px;
+  right: 30%;
+  z-index: 1;
+}
+
+.middle {
+  position: relative;
+  background-color: #ffffff;
+  flex: 33.333%;
+  padding-left: 58px;
+  padding-right: 58px;
+}
+.middle img {
+  border-radius: 200px;
+  width: 100%;
+}
+.right {
+  background-color: #ffffff;
+  flex: 33.333%;
+  padding-left: 58px;
+  padding-right: 64px;
+}
+.right img {
+  border-radius: 200px;
+  width: 100%;
+}
+
+.photos p {
+  margin-bottom: 0;
+  margin-top: 32px;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.top-left {
+  position: absolute;
+  top: -64px;
+  left: -45px;
+  max-height: 267px;
+  max-width: 254px;
+}
+.bottom-left {
+  position: absolute;
+  left: -28px;
+  top: 240px;
+  max-width: 232px;
+  max-height: 188px;
+  z-index: 1;
+}
+.top-right {
+  position: absolute;
+  right: 2px;
+  top: -36px;
+  max-width: 232px;
+  max-height: 188px;
+  z-index: 1;
+}
+.bottom-right {
+  position: absolute;
+  right: 9px;
+  bottom: -8px;
+  max-width: 232px;
+  max-height: 188px;
+  z-index: 1;
+}
+.main-picture {
+  position: relative;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 375px) {
+  .photos {
+    flex-direction: column;
+  }
+  .photos p {
+    font-size: 24px;
+  }
+  .top-left {
+    position: absolute;
+    top: -64px;
+    left: -45px;
+    max-height: 267px;
+    max-width: 254px;
+  }
+  .bottom-left {
+    position: absolute;
+    left: -28px;
+    top: 240px;
+    max-width: 232px;
+    max-height: 188px;
+    z-index: 1;
+  }
+  .top-right {
+    position: absolute;
+    right: 2px;
+    top: -36px;
+    max-width: 232px;
+    max-height: 188px;
+    z-index: 1;
+  }
+  .bottom-right {
+    position: absolute;
+    right: 9px;
+    bottom: -8px;
+    max-width: 232px;
+    max-height: 188px;
+    z-index: 1;
+  }
+}
